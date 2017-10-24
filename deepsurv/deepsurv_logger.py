@@ -7,7 +7,7 @@ import math
 class DeepSurvLogger():
     def __init__(self, name):
         self.logger         = logging.getLogger(name)
-        self.history = {}
+        self.history = defaultdict(list)
 
     def logMessage(self,message):
         self.logger.info(message)
@@ -28,7 +28,7 @@ class DeepSurvLogger():
         self.logger.info(message)
 
     def logValue(self, key, value, step):
-        pass
+        self.history[key].append((step, value))
 
     def shutdown(self):
         logging.shutdown()

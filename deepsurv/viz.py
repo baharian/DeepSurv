@@ -28,7 +28,7 @@ def plot_log(log):
             'train': training loss
             'valid': validation loss
             'train_ci': training concordance index
-            VALID_CI: validation concordance index
+            'valid_c-index': validation concordance index
     """
     TRAIN_LOSS = 'loss'
     TRAIN_CI = 'c-index'
